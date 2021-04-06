@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  	<meta name="author" content="YM">
+
+	<title>DragonsNest</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<main id="main-page">
+		<nav id="side-bar">
+			<div id="logo">
+				<span>DragonsNest</span>
+			</div>
+
+			<div id="areas">
+				<h1>Places</h1>
+				<ul>
+					<button class="area-button" id="garden-button">CAS Garden</button>
+					<button class="area-button" id="pond-button">ALB Pond</button>
+					<button class="area-button" id="sports-button">Parking and Sports Building</button>
+					<button class="area-button" id="usc-button">USC</button>
+				</ul>
+			</div>
+
+			<div id="sound-control">
+				<h1>Ambience</h1>
+
+				<!-- SOUND LIST 1 -->
+				<div id="sound-list-garden">
+					<div class="sound-track" id="birds-track">
+						<audio src="./audio/bird-sounds.mp3" preload="metadata" id="birds-audio" loop></audio>
+						<span>Environment Sounds</span>
+						<button id="control-button-birds">
+							<div id="play-button-birds"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-birds"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-birds" max="100" value="50" id="volume-slider-birds">
+					</div>
+
+					<div class="sound-track" id="people-track">
+						<audio src="./audio/speaking-people.wav" preload="metadata" id="people-audio" loop></audio>
+						<span>Other People</span>
+						<button id="control-button-people">
+							<div id="play-button-people"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-people"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-people" max="100" value="50" id="volume-slider-people">
+					</div>
+
+					<div class="sound-track" id="street-track">
+						<audio src="./audio/street-sounds.wav" preload="metadata" id="street-audio" loop></audio>
+						<span>Street Sounds</span>
+						<button id="control-button-street">
+							<div id="play-button-street"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-street"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-street" max="100" value="50" id="volume-slider-street">
+					</div>
+				</div>
+
+				<!-- SOUND LIST 2 -->
+				<div id="sound-list-pond">
+					<div class="sound-track" id="pond-track">
+						<audio src="./audio/pond-sounds.wav" preload="metadata" id="pond-audio" loop></audio>
+						<span>Pond</span>
+						<button id="control-button-pond">
+							<div id="play-button-pond"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-pond"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-pond" max="100" value="50" id="volume-slider-pond">
+					</div>
+
+					<div class="sound-track" id="pond-people-track">
+						<audio src="./audio/speaking-people.wav" preload="metadata" id="pond-people-audio" loop></audio>
+						<span>Other People</span>
+						<button id="control-button-pond-people">
+							<div id="play-button-pond-people"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-pond-people"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-pond-people" max="100" value="50" id="volume-slider-pond-people">
+					</div>
+					
+					<div class="sound-track" id="pond-street-track">
+						<audio src="./audio/street-sounds.wav" preload="metadata" id="pond-street-audio" loop></audio>
+						<span>Street Sounds</span>
+						<button id="control-button-pond-street">
+							<div id="play-button-pond-street"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-pond-street"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-pond-street" max="100" value="50" id="volume-slider-pond-street">
+					</div>
+				</div>
+
+				<!-- SOUND LIST 3 -->
+				<div id="sound-list-sports">
+					<div class="sound-track" id="playing-track">
+						<audio src="./audio/playing-sounds.wav" preload="metadata" id="playing-audio" loop></audio>
+						<span>People Playing</span>
+						<button id="control-button-playing">
+							<div id="play-button-playing"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-playing"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-playing" max="100" value="50" id="volume-slider-playing">
+					</div>
+
+					<div class="sound-track" id="talking-track">
+						<audio src="./audio/speaking-people.wav" preload="metadata" id="talking-audio" loop></audio>
+						<span>People Talking</span>
+						<button id="control-button-talking">
+							<div id="play-button-talking"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-talking"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-talking" max="100" value="50" id="volume-slider-talking">
+					</div>
+				</div>
+
+				<!-- SOUND LIST 4 -->
+				<div id="sound-list-usc">
+					<div class="sound-track" id="customers-track">
+						<audio src="./audio/canteen-sounds.wav" preload="metadata" id="customers-audio" loop></audio>
+						<span>Other People</span>
+						<button id="control-button-customers">
+							<div id="play-button-customers"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-customers"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-customers" max="100" value="50" id="volume-slider-customers">
+					</div>
+
+					<div class="sound-track" id="fan-track">
+						<audio src="./audio/fan-sounds.wav" preload="metadata" id="fan-audio" loop></audio>
+						<span>Fan</span>
+						<button id="control-button-fan">
+							<div id="play-button-fan"><i class="fa fa-play" aria-hidden="true"></i></div>
+							<div id="pause-button-fan"><i class="fa fa-pause" aria-hidden="true"></i></div>
+						</button><br>
+						<i class="fa fa-volume-up" aria-hidden="true"></i>
+						<input type="range" name="volume-slider-fan" max="100" value="50" id="volume-slider-fan">
+					</div>
+				</div>
+
+			</div>
+		</nav>
+		
+
+		<section id="about-header">
+			<button id="about-modal-open">about</button>
+			<div id="about-modal">
+				<header id="modal-header">
+					<button id="about-modal-close">&times;</button>
+				</header>
+
+				<section id="modal-body">
+					<h1>about</h1>
+					<p>Inspired by <a href="https://www.imissmybar.com/" target="_blank">IMissMyBar</a>, <a href="https://imisstheoffice.eu/" target="_blank">IMissTheOffice</a>, and <a href="https://imissmycafe.com/" target="_blank">IMissMyCafe</a>.</p>
+					<p>Sounds are downloaded from <a href="https://freesound.org/" target="_blank">freesound.org</a>.</p>
+					<p>Code by Yves Mata. If you wish to contact me regarding this website, or even for any other reason, please do so at ymsmash@gmail.com or at yvus.mata@up.phinma.edu.ph. I'll try to respond to you as soon as I can!</p>
+				</section>
+			</div>
+		</section>
+
+		<footer id="page-footer">
+			<button id="menu-button">
+				<div id="close-menu">&times;</div>
+				<div id="open-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			</button>
+			<span>Hide/Show UI</span>
+			<iframe src="https://open.spotify.com/embed/playlist/2rKZ2UQbejwdezKLKchPK8" width="100%" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</footer>
+	</main>
+
+	<div id="modal-overlay"></div>
+
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
